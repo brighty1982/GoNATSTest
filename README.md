@@ -33,13 +33,17 @@ This will place the gnatsd executable in your GOPATH/bin
 
 - NATS streaming is installed (Not required for Basic pub-sub example)
 
->go get github.com/nats-io/nats-streaming-server
+> go get github.com/nats-io/nats-streaming-server
 
 navigate to nats-streaming-server directory and run. 
 
 > go install
 
 This will place the ats-streaming-server executable in your GOPATH/bin
+
+- NATS streaming client is installed (Not required for Basic pub-sub example)
+
+> go get github.com/nats-io/go-nats-streaming
 
 
 
