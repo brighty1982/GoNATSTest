@@ -10,13 +10,13 @@ import (
 
 const (
 	clusterID = "test-cluster"
-	clientID  = "natsStreamTest"
+	clientID  = "TestSub"
 	durableID = "myDurableID"
 )
 
 func main() {
 
-	// connect to streaming server
+	// connect to streaming server on local host
 	sc, err := stan.Connect(
 		clusterID,
 		clientID,
@@ -36,7 +36,8 @@ func main() {
 	sc.Subscribe("foo", func(m *stan.Msg) {
 		m.Ack() // Manual ACK
 		fmt.Println("Received a message: ", string(m.Data))
-	}, stan.DurableName(durableID), stan.DeliverAllAvailable())
+	}, stan.DurableName(durableID))
+	//, stan.DurableName(durableID), stan.DeliverAllAvailable())
 	runtime.Goexit()
 
 }

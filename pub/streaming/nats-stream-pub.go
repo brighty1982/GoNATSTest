@@ -9,7 +9,7 @@ import (
 
 const (
 	clusterID = "test-cluster"
-	clientID  = "natsStreamTest"
+	clientID  = "TestPub"
 )
 
 func main() {
