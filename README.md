@@ -121,20 +121,20 @@ $ nats-streaming-server
 ```
 Output:
 ```
-$ [31661] 2018/08/28 09:20:44.547304 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.11.0
-$ [31661] 2018/08/28 09:20:44.547438 [INF] STREAM: ServerID: 2X1raoN93a8mWfH0jGnNGd
-$ [31661] 2018/08/28 09:20:44.547442 [INF] STREAM: Go version: go1.10.3
-$ [31661] 2018/08/28 09:20:44.548048 [INF] Starting nats-server version 1.3.0
-$ [31661] 2018/08/28 09:20:44.548129 [INF] Git commit [not set]
-$ [31661] 2018/08/28 09:20:44.548388 [INF] Listening for client connections on 0.0.0.0:4222
-$ [31661] 2018/08/28 09:20:44.548397 [INF] Server is ready
-$ [31661] 2018/08/28 09:20:44.576881 [INF] STREAM: Recovering the state...
-$ [31661] 2018/08/28 09:20:44.576906 [INF] STREAM: No recovered state
-$ [31661] 2018/08/28 09:20:44.832685 [INF] STREAM: Message store is MEMORY
-$ [31661] 2018/08/28 09:20:44.832836 [INF] STREAM: ---------- Store Limits ----------
-$ [31661] 2018/08/28 09:20:44.832856 [INF] STREAM: Channels:                  100 *
-$ [31661] 2018/08/28 09:20:44.832863 [INF] STREAM: --------- Channels Limits --------
-$ [31661] 2018/08/28 09:20:44.832872 [INF] STREAM:   Subscriptions:          1000 *
+[31661] 2018/08/28 09:20:44.547304 [INF] STREAM: Starting nats-streaming-server[test-cluster] version 0.11.0
+[31661] 2018/08/28 09:20:44.547438 [INF] STREAM: ServerID: 2X1raoN93a8mWfH0jGnNGd
+[31661] 2018/08/28 09:20:44.547442 [INF] STREAM: Go version: go1.10.3
+[31661] 2018/08/28 09:20:44.548048 [INF] Starting nats-server version 1.3.0
+[31661] 2018/08/28 09:20:44.548129 [INF] Git commit [not set]
+[31661] 2018/08/28 09:20:44.548388 [INF] Listening for client connections on 0.0.0.0:4222
+[31661] 2018/08/28 09:20:44.548397 [INF] Server is ready
+[31661] 2018/08/28 09:20:44.576881 [INF] STREAM: Recovering the state...
+[31661] 2018/08/28 09:20:44.576906 [INF] STREAM: No recovered state
+[31661] 2018/08/28 09:20:44.832685 [INF] STREAM: Message store is MEMORY
+[31661] 2018/08/28 09:20:44.832836 [INF] STREAM: ---------- Store Limits ----------
+[31661] 2018/08/28 09:20:44.832856 [INF] STREAM: Channels:                  100 *
+[31661] 2018/08/28 09:20:44.832863 [INF] STREAM: --------- Channels Limits --------
+[31661] 2018/08/28 09:20:44.832872 [INF] STREAM:   Subscriptions:          1000 *
 ```
 
 Now run the publisher in another terminal. Note that in the previous example we ran the subscriber first to ensure it was listening when the messages were sent. This time we don't have to as the client will get them anyway.
@@ -145,16 +145,16 @@ $ go run GOPATH/src/github.com/user/GoNATSTest/pub/streaming/nats-stream-pub.go
 Output:
 
 ```
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 0
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 1
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 2
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 3
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 4
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 5
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 6
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 7
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 8
-$ 2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 9
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 0
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 1
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 2
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 3
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 4
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 5
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 6
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 7
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 8
+2018/08/28 09:47:07 Published message on foo: Hello NATS Streaming 9
 ```
 
 
@@ -165,17 +165,17 @@ $ go run GOPATH/src/github.com/user/GoNATSTest/sub/streaming/nats-stream-sub.go
 Output:
 
 ```
-$ 2018/08/28 10:29:44 Subscribing to subject 'foo'
-$ Received a message:  Hello NATS Streaming 0
-$ Received a message:  Hello NATS Streaming 1
-$ Received a message:  Hello NATS Streaming 2
-$ Received a message:  Hello NATS Streaming 3
-$ Received a message:  Hello NATS Streaming 4
-$ Received a message:  Hello NATS Streaming 5
-$ Received a message:  Hello NATS Streaming 6
-$ Received a message:  Hello NATS Streaming 7
-$ Received a message:  Hello NATS Streaming 8
-$ Received a message:  Hello NATS Streaming 9
+2018/08/28 10:29:44 Subscribing to subject 'foo'
+Received a message:  Hello NATS Streaming 0
+Received a message:  Hello NATS Streaming 1
+Received a message:  Hello NATS Streaming 2
+Received a message:  Hello NATS Streaming 3
+Received a message:  Hello NATS Streaming 4
+Received a message:  Hello NATS Streaming 5
+Received a message:  Hello NATS Streaming 6
+Received a message:  Hello NATS Streaming 7
+Received a message:  Hello NATS Streaming 8
+Received a message:  Hello NATS Streaming 9
 ```
 
 Even though the subsciber wasn't running when the messages were sent it still received them.
